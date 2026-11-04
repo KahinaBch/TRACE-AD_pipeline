@@ -1,0 +1,25 @@
+# Nextflow run files
+work/
+.nextflow/
+.nextflow.log*
+results_*/
+trace_ad_references/
+
+# Python
+__pycache__/
+
+# Data and large downloads -- not committed
+*.vcf
+*.vcf.gz
+*.bcf
+*.tbi
+*.csi
+*.map
+*.jar
+logs/
+.DS_Store
+
+# exceptions: small files the pipeline ships with
+!assets/genetic_maps/*.map
+!tests/data/*.vcf.gz
+!tests/data/*.tbi
