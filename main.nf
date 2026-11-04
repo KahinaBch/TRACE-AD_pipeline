@@ -104,7 +104,7 @@ def checkSanity(report) {
               text.readLines().findAll { line -> line.startsWith('FAIL:') }.join('\n  ')
     if (!text.contains('BUILD: GRCh38')) {
         msg += "\n\nThe pipeline needs GRCh38 input. Lift the VCF over to GRCh38 first (best option if available: " +
-               "re-impute on a GRCh38 panel such as TOPMed), then re-run -- see https://github.com/KahinaBch/TRACE-AD_pipeline/wiki/When-the-pipeline-stops#input-on-grch37-hg19"
+               "re-impute on a GRCh38 panel such as TOPMed), then re-run -- see https://github.com/KahinaBch/TRACE-AD_pipeline/wiki/Input-on-GRCh37"
     } else if (text =~ /RECOVERABLE_FLIPS: [1-9]/) {
         def pipeline = workflow.repository ? "${workflow.repository} -r ${workflow.revision}" : workflow.projectDir
         msg += "\n\nFix them with:\n  nextflow run ${pipeline} --mode fix_strands --vcf ${params.vcf} --protein ${params.protein} -profile ${workflow.profile}\n" +

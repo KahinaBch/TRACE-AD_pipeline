@@ -4,7 +4,7 @@ Gives each participant of a cohort their **global ancestry** and their **local
 ancestry at a protein's risk variants** (APOE, TREM2), with FLARE and the gnomAD
 HGDP + 1000 Genomes reference panel.
 
-More detail on everything below: **[the wiki](https://github.com/KahinaBch/TRACE-AD_pipeline/wiki)**. Options: `--help`.
+All parameters, cluster settings, adding a protein, GRCh37 input: **[the wiki](https://github.com/KahinaBch/TRACE-AD_pipeline/wiki)**. Options: `--help`.
 
 ## 1. Install (once)
 
@@ -112,7 +112,7 @@ It prints the reason and what to do. The three common cases:
     ```
 - **Strand flips found**: run the fix command it prints (`--mode fix_strands ...`), then
   re-run step 4 with the fixed file it creates.
-- **Input is GRCh37**: convert it to GRCh38 first ([wiki: Input on GRCh37](https://github.com/KahinaBch/TRACE-AD_pipeline/wiki/When-the-pipeline-stops#input-on-grch37-hg19)).
+- **Input is GRCh37**: convert it to GRCh38 first ([wiki: Input on GRCh37](https://github.com/KahinaBch/TRACE-AD_pipeline/wiki/Input-on-GRCh37)).
 
 An interrupted run continues where it stopped if you add `-resume` to the same command.
 Example: 
